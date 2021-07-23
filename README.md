@@ -92,48 +92,76 @@ This section has moved here:
 
 ---
 
-# Быстрый старт
+## Быстрый старт
 
-### `npx create-react-app .` имя*папки*проекта
+```bash
+npx create-react-app .имя папки проекта
+```
 
 Для того чтобы создать приложение в текущей папке, вместо имени проекта ставится
 точка. Например npx `create-react-app .`. Это можно использовать когда был
 склонирован репозиторий и в его локальной версии инициализируется приложение.
 
-## Установить в проект следующие пакеты.
+### Установить в проект следующие пакеты.
 
-### `npm install --save-dev prettier eslint`
+```bash
+npm install --save-dev prettier eslint
+```
 
-## Инициализация `lint-staged` и `husky`.
+### Инициализация `lint-staged` и `husky`.
 
 Пользователям MacOS и Linux систем необходимо выполнить в терминале следующую
 команду. Она установит и настроит `husky` и `lint-staged` в зависимости от
 инструментов качества кода из зависимостей проекта в `package.json`.
 
-### `npx mrm lint-staged`
+```bash
+npx mrm lint-staged
+```
 
-## Пользователям Windows необходимо выполнить следующую команду. Она делает тоже самое.
+Пользователям Windows необходимо выполнить следующую команду. Она делает тоже
+самое.
 
-### `npx mrm@2 lint-staged`
+```bash
+npx mrm@2 lint-staged
+```
 
-### `npm install --save prop-types`
+```bash
+npm install --save prop-types
+```
 
-### `{"hooks": {"pre-commit": "lint-staget"}}`
+```bash
+{
+    "hooks":{
+      "pre-commit": "lint-staget"
+    }
+}
+```
 
-## В файле `package.json` нужно добавить
+В файле `package.json` добавить
 
-### `"homepage": "https://имя_пользователя.github.io/имя_репозитория",`
+```bash
+"homepage": "https://имя_пользователя.github.io/имя_репозитория",
+```
 
-## заменив `имя_пользователя` и `имя_репозитория` на свои.
+заменив `имя_пользователя` и `имя_репозитория` на свои.
 
-### `npm run build`
+```bash
+npm run build
+```
 
-### `npm install gh-pages --save-dev`
+```bash
+npm install gh-pages --save-dev
+```
 
-## добавить два пакета в `package.json`
+добавить два пакета в `package.json`
 
-### `"predeploy": "npm run build","deploy": "gh-pages -d build"`
+```bash
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
 
-## подключить пакет `npm install modern-normalize`
+```bash
+npm install modern-normalize
+```
 
 ---
